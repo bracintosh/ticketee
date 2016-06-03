@@ -1,6 +1,6 @@
-require "rails_helper"
+require "spec_helper"
 
-RSpec.feature "Users can view projects" do
+feature "Users can view projects" do
   scenario "with the project details" do
     project = FactoryGirl.create(:project, name: "Sublime Text 3")
 

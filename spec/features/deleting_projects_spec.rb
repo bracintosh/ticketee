@@ -1,9 +1,9 @@
-require "rails_helper"
+require "spec_helper"
 
-RSpec.feature "Users can delete projects" do
+feature "Users can delete projects" do
   scenario "successfully" do
     FactoryGirl.create(:project, name: "Sublime Text 3")
-    
+
     visit "/"
     click_link "Sublime Text 3"
     click_link "Delete Project"
