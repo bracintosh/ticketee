@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 feature "Users can view projects" do
   scenario "with the project details" do

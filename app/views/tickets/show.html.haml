@@ -4,6 +4,13 @@
 
   %header
     %h2= @ticket.name
+  %table.attributes
+    %tr
+      %th Author:
+      %td= @ticket.author.email
+    %tr
+      %th Created:
+      %td= "#{time_ago_in_words(@ticket.created_at)} ago"
 
     %ul.actions
       %li= link_to "Edit Ticket", [:edit, @project, @ticket], class: "edit"
