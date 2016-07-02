@@ -1,7 +1,9 @@
 %header
   %h1 Projects
-  %ul.actions
-    = link_to "New Project", new_admin_project_path, class: "new"
+
+  - admins_only do
+    %ul.actions
+      = link_to "New Project", new_admin_project_path, class: "new"
 
 #projects
   -@projects.each do |project|
